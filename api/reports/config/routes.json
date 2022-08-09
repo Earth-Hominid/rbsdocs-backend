@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/reports/me",
+      "handler": "reports.me",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/reports/count",
       "handler": "reports.count",
       "config": {

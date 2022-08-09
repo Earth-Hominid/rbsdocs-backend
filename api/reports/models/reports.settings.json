@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "reports",
   "info": {
-    "name": "reports"
+    "name": "reports",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,12 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "richtext"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "content": {
+      "type": "richtext"
+    },
+    "description": {
       "type": "richtext"
     },
     "image": {
@@ -34,12 +37,16 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
     "owner": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "reports"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }

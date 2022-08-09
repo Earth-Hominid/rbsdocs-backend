@@ -13,10 +13,10 @@ module.exports = {
     let entity;
     if (ctx.is("multipart")) {
       const { data, files } = parseMultipartData(ctx);
-      data.user = ctx.state.user.id;
+      data.owner = ctx.state.user.id;
       entity = await strapi.services.articles.create(data, { files });
     } else {
-      ctx.request.body.user = ctx.state.user.id;
+      ctx.request.body.owner = ctx.state.user.id;
       entity = await strapi.services.articles.create(ctx.request.body);
     }
     return sanitizeEntity(entity, { model: strapi.models.articles });
@@ -30,7 +30,7 @@ module.exports = {
 
     const [articles] = await strapi.services.articles.find({
       id: ctx.params.id,
-      "user.id": ctx.state.user.id,
+      "owner.id": ctx.state.user.id,
     });
 
     if (!articles) {
@@ -54,7 +54,7 @@ module.exports = {
 
     const [articles] = await strapi.services.articles.find({
       id: ctx.params.id,
-      "user.id": ctx.state.user.id,
+      "owner.id": ctx.state.user.id,
     });
 
     if (!articles) {

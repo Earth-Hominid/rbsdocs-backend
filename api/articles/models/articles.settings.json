@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "articles"
+    "name": "articles",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "content": {
       "type": "richtext"
@@ -34,7 +37,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": false
     },
     "owner": {
       "plugin": "users-permissions",

@@ -38,7 +38,7 @@
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true
+      "required": false
     },
     "owner": {
       "plugin": "users-permissions",

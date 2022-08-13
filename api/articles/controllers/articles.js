@@ -3,7 +3,6 @@ const { sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   // Create article with linked user
-
   async create(ctx) {
     let entity;
     if (ctx.is("multipart")) {

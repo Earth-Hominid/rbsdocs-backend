@@ -20,9 +20,6 @@
     "content": {
       "type": "richtext"
     },
-    "description": {
-      "type": "richtext"
-    },
     "image": {
       "model": "file",
       "via": "related",
@@ -46,6 +43,9 @@
       "via": "articles"
     },
     "category": {
+      "type": "string"
+    },
+    "description": {
       "type": "string"
     }
   }

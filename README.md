@@ -1,3 +1,3 @@
-# Strapi application
+# Business Communication Platform | Full Stack
 
-A quick description of your strapi application
+

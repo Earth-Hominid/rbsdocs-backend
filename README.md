@@ -1,3 +1,3 @@
-# Business Communication Platform | Full Stack
+# Business Communication Platform | Back End
 
 

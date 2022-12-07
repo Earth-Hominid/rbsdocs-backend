@@ -11,7 +11,7 @@ Icon
 ._*
 
 
-.vscode
+ .vscode/settings.json
 package-lock.json
 
 

@@ -1,3 +1,3 @@
-// module.exports = ({ env }) => ({
-//   url: env("MY_HEROKU_URL"),
-// });
+module.exports = ({ env }) => ({
+  url: env("https://rbsdocs-backend.up.railway.app/"),
+});
